@@ -13,7 +13,6 @@ module.exports = function(grunt) {
             dest: 'build/js/app.js'
         }
     },
-
     uglify: {
         options: {
             banner: '/*! <%= pkg.name %> - v<%= pkg.version %> */\n',
@@ -48,6 +47,13 @@ module.exports = function(grunt) {
           'build/css/main.css': 'src/scss/app.scss'
         }
       }
+    },
+    cssmin: {
+      combine: {
+        files: {
+          'build/css/main.min.css': ['build/css/main.css']
+        }
+      }
     }
   });
 
@@ -58,8 +64,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Build task(s).
-  grunt.registerTask('default', ['clean:build', 'jshint', 'jasmine',  'concat', 'uglify']);
-  grunt.registerTask('styles', ['sass']);
+  grunt.registerTask('default', ['jshint', 'clean:build',  'concat', 'uglify', 'sass', 'cssmin']);
+  grunt.registerTask('test', ['default', 'jasmine']);
 };
