@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "authors": [
+    "Adrian Lawrence"
+  ],
+  "description": "package management example",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "5.0.2"
+  }
+}

@@ -1,0 +1,32 @@
+body {
+    background-color: $grey;
+
+    h1 {
+        font-size: 1.3em;
+        color: $red;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        color: $blue;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        color: $green;
+    }
+}
+
+main {
+    div {
+        color: $tomato;
+        text-align: center;
+        margin-top: rem-calc(140);
+        font-size: rem-calc(20);
+        @include single-transition;
+    }
+
+    div:hover {
+        color: darken($red, 20);
+    }
+}
