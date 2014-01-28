@@ -20,6 +20,8 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compass": "~0.7.0",
     "grunt-contrib-sass": "~0.6.0",
-    "grunt-contrib-cssmin": "~0.7.0"
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-usemin": "~2.0.2",
+    "grunt-cli": "~0.1.13"
   }
 }
